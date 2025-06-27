@@ -4,10 +4,6 @@ phases:
   install:
     runtime-versions:
       nodejs: 16
-    commands:
-      # 启动 Docker daemon（构建镜像时必须）
-      - nohup /usr/local/bin/dockerd-entrypoint.sh &>/tmp/dockerd.log &
-      - timeout 15 sh -c "until docker info; do sleep 1; done"
   pre_build:
     commands:
       #登入ECR
