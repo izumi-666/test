@@ -3,7 +3,7 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: ""
+        TaskDefinition: "arn:aws:ecs:ap-northeast-1:170973895532:task-definition/test-taskdingyi:3"
         LoadBalancerInfo:
           ContainerName: "httpd"
           ContainerPort: 80
